@@ -1,0 +1,56 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+}
+
+.countdown {
+    text-align: center;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+#timer {
+    font-size: 2rem;
+    margin-top: 10px;
+}
+
+#timer div {
+    display: inline-block;
+    padding: 0 10px;
+}
+
+#end-message {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    color: red;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+#end-message.visible {
+    opacity: 1;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes shake {
+    0% { transform: translateX(-10px); }
+    25% { transform: translateX(10px); }
+    50% { transform: translateX(-10px); }
+    75% { transform: translateX(10px); }
+    100% { transform: translateX(0); }
+}
+
+.shake {
+    animation: shake 0.5s ease;
+}
